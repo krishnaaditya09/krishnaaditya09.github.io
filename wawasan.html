@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Wawasan</title>
     <link rel="icon" href="asset/images/iconweb.png">
     <!-- Bootstrap CSS CDN -->
@@ -14,6 +15,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
     <!-- JQuery Link -->
     <script type="text/javascript" src="asset/js/jquery-3.6.0.min.js"></script>
@@ -24,13 +26,15 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
 </head>
 
 <body style="background-color: #f3f4f5">
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
         <div class="container ">
             <a class="navbar-brand" href="#">
                 <img src="asset/images/logo.png" alt="" width="120">
@@ -41,42 +45,308 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 me-2 mb-lg-0 ">
+                <ul class="navbar-nav  ms-auto mb-2 me-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link  active text-light" aria-current="page" href="index.html">Beranda</a>
+                        <a class="nav-link   text-light" aria-current="page" href="index.html">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#objekwisata">Objek Wisata</a>
+                        <a class="nav-link text-light" href="objekwisata.html">Objek Wisata</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#saranaakomodasi">Sarana dan Akomodasi</a>
+                        <a class="nav-link active text-light" href="saranaakomodasi.html">Sarana dan Akomodasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Wawasan</a>
+                        <a class="nav-link text-light" href="wawasan.html">Wawasan</a>
+                    </li>
 
-                    </li>
                 </ul>
                 <form class="d-flex ">
-                    <input class="form-control me-2 rounded-pill" type="search" placeholder="Search"
-                        aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <!-- <input class="form-control me-2 rounded-pill" type="search"  placeholder="Search" aria-label="Search"> -->
+                    <button class="btn btn-outline-light rounded-pill w-100 fw-bold" type="button"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">Search</button>
                 </form>
             </div>
         </div>
     </nav>
+    <div class="modal fade rounded-3" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form class="d-flex w-100">
+                        <input class="form-control me-2 rounded-pill " type="search" placeholder="Search"
+                            aria-label="Search">
 
+                        <button type="button" class="btn btn-outline-danger bi bi-x-lg rounded-pill "
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </form>
+                </div>
+                <div class="modal-body">
+                    <div class="top-searches">
+                        <h6>Top searches</h6>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill me-1 my-2">Pantai
+                            Kuta</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill me-1 my-2">Seminyak</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill me-1 my-2">Sangeh</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill me-1 my-2">Uluwatu</button>
+                    </div>
+                    <div class="trending-searches">
+                        <h5 class="my-3">Trending searches</h5>
+                        <div class="container-fluid">
+                            <div class="row ">
+                                <div class=" col-6 col-md-6    ">
+                                    <div class=" mb-5  ">
+                                        <div class="row  ">
+                                            <div class=" col-sm-6 ">
+                                                <img src="asset/images/famehotel.jpg" class="img-fluid rounded-3"
+                                                    alt="...">
+                                            </div>
+                                            <div class="col-sm-6 d-md-flex align-items-md-center ">
+                                                <h6 class="card-title text-center ">Fame Hotel</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6  col-md-6 ">
+                                    <div class=" mb-3">
+                                        <div class="row g-0">
+                                            <div class="col-sm-6 ">
+                                                <img src="asset/images/badung.jpg" class="img-fluid rounded-3"
+                                                    alt="...">
+                                            </div>
+                                            <div class="col-sm-6 d-md-flex align-items-md-center">
+                                                <h6 class="card-title text-center">Seminyak</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- akhir navbar -->
+
+    <!-- carousel -->
+    <div class="carousel-fluid carousel-contain">
+
+        <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ">
+                <div class="carousel-item active ">
+                    <img src="asset/images/tamanayun.jpg" class="d-block opacity-75" width="100%" height="600px"
+                        alt="...">
+                    <div class="carousel-caption">
+                        <h1 class="">Taman Ayun</h1>
+                        <p class=" d-none d-sm-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
+                            unde modi
+                            itaque aperiam
+                            magni
+                            nemo, accusamus sequi vel, dolorum, ab ea exercitationem perspiciatis hic. Eligendi,
+                            suscipit.
+                            Excepturi facilis nulla maiores!</p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-success mx-2 rounded-pill" type="button" data-bs-toggle="modal"
+                                data-bs-target="#jelajahi1"><b>Jelajahi</b></button>
+                            <button class="btn btn-primary mx-2 rounded-pill" type="button" data-bs-toggle="modal"
+                                data-bs-target="#video1"><b>Video</b></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/images/pantaikuta.jpg" class="d-block w-100 opacity-75 " width="100%" height="600px"
+                        alt="...">
+                    <div class="carousel-caption">
+                        <h1>Pantai Kuta</h1>
+                        <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Necessitatibus, explicabo nisi?
+                            Consequatur ipsa, dolor ullam nesciunt obcaecati distinctio dolorum autem earum nemo nostrum
+                            fugiat voluptatem itaque deleniti eveniet nobis quasi.</p>
+                        <div class="d-grid gap-2 d-md-block ">
+                            <button class="btn btn-success mx-2 rounded-pill" type="button" data-bs-toggle="modal"
+                                data-bs-target="#jelajahi2"><b>Jelajahi</b></button>
+                            <button class="btn btn-primary mx-2 rounded-pill" type="button" data-bs-toggle="modal"
+                                data-bs-target="#video2"><b>Video</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/images/badung.jpg" class="d-block w-100 opacity-75 " width="100%" height="600px"
+                        alt="...">
+                    <div class="carousel-caption ">
+                        <h1>Seminyak</h1>
+                        <p class="d-none d-sm-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Recusandae quaerat dicta nam
+                            dolores
+                            eveniet suscipit, possimus quod quidem! Nobis molestiae, eum a explicabo quidem voluptate
+                            amet
+                            velit maxime non tenetur?</p>
+                        <div class="d-grid gap-2 d-md-block ">
+                            <button class="btn btn-success mx-2 rounded-pill" type="button" data-bs-toggle="modal"
+                                data-bs-target="#jelajahi3"><b>Jelajahi</b> </button>
+                            <button class="btn btn-primary mx-2 rounded-pill" type="button" data-bs-toggle="modal"
+                                data-bs-target="#video3"><b>Video</b> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+
+
+            <!-- bagian popup -->
+            <div class="popup">
+                <!-- video pop up 1 -->
+                <div class="modal fade" id="video1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="video1">Video Taman Ayun</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <iframe class="w-100" height="480" src="https://www.youtube.com/embed/AGIQHgHwufM"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- video pop up 2 -->
+                <div class="modal fade" id="video2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="video2">Video Pantai Kuta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <iframe class="w-100" height="480" src="https://www.youtube.com/embed/m1zyRNLJeRE"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- video pop up 3 -->
+                <div class="modal fade" id="video3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="video3">Video Seminyak</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <iframe class="w-100" height="480" src="https://www.youtube.com/embed/cJ636Qb5NdE"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- akhir popup video -->
+
+                <!-- google maps pop up 1 -->
+                <div class="modal fade" id="jelajahi1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="jelajahi1">Lokasi Taman Ayun</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.564112031545!2d115.17041261438511!3d-8.541626988935382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23b90db7a4001%3A0xaf262ff28fc4caed!2sTaman%20Ayun%20Temple!5e0!3m2!1sid!2sid!4v1642672107483!5m2!1sid!2sid"
+                                    width="100%" height="450" style="border:0;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- google maps pop up 2 -->
+                <div class="modal fade" id="jelajahi2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="jelajahi2">Lokasi Pantai Kuta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15774.8844390462!2d115.15927977084341!3d-8.718011239915512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246bc2ab70d43%3A0x82feaae12f4ab48e!2sPantai%20Kuta!5e0!3m2!1sid!2sid!4v1642672288797!5m2!1sid!2sid"
+                                    width="100%" height="450" style="border:0;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- google maps pop up 3 -->
+                <div class="modal fade" id="jelajahi3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="jelajahi3">Lokasi Seminyak</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.069782294819!2d115.1566541708381!3d-8.689890188635001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246dfe07cc8ff%3A0x5030bfbca82fdd0!2sSeminyak%2C%20Kuta%2C%20Kabupaten%20Badung%2C%20Bali!5e0!3m2!1sid!2sid!4v1642672422191!5m2!1sid!2sid"
+                                    width="100%" height="450" style="border:0;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- akhir popup -->
+        </div>
+    </div>
+    <!-- Akhir carousel -->
 
     <!-- Blog Wawasan -->
     <section>
-
         <div class="container">
-
             <div class="row">
                 <!-- Breadcrumb -->
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Wawasan</li>
                     </ol>
                 </nav>
