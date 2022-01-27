@@ -1,0 +1,20 @@
+.carousel-contain{
+    background-color: black;
+}
+.carousel-caption h1, .carousel-caption p{
+    text-shadow: 2px 1px black;
+}
+.carousel-item h1{
+    margin-top: -300px;
+}
+
+.breadcrumb{
+    margin-top: 100px;
+    background-color: #f3f4f5;
+}
+
+.navbar, nav form button{
+    font-family: 'Montserrat', serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
